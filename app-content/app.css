@@ -1,0 +1,110 @@
+body {
+    background: url("/img/index-background.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.login-position, .register-position {
+    margin-top: 200px;
+    float: right;
+}
+
+.img-face {
+    border-radius: 50%;
+    width: 80%;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 1px solid #ccc;
+}
+
+.img-face-small {
+    border-radius: 50%;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.comment-input {
+    
+}
+.comment-button {
+    
+}
+
+.home-bar {
+    background-color: #86c6c6;
+}
+
+.home-welcome {
+    font-family: 'Poiret One', cursive;
+    font-size: 36px;
+}
+
+.home-btn {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.home-h2 {
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: 500;
+    font-size: 30px;
+}
+.input-group {
+    vertical-align: middle;
+}
+
+.img-face:hover {
+    border: 1px solid #777;
+}
+
+.home-profile {
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 30px;
+    width: 100%; 
+    height: auto;
+    font-size: 16px;
+    color: dimgray;
+}
+
+.home-profile-special {
+    font-size: 24px;
+    color: black;
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: 500;
+    
+}
+
+.img-rounded {
+    border:2px solid #dcefef;
+    background-color: white;
+}
+
+.home-friendlist {
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top:30px;
+    width: 100%; 
+    height: auto; 
+    background-color: ;
+    
+}
+
+/*
+.home {
+    background-color: #eef7f7;
+}
+*/
+
+.home-posts, .home-peopleMayKnow {
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 30px;
+}
+
+.map {
+    height: 100%;
+}

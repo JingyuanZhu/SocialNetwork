@@ -1,0 +1,97 @@
+<div class='container home'>
+    <div class="row home-bar">
+        <div class="col-md-4 col-md-offset-1">
+            <p class="home-welcome">Welcome to <strong>NYC Life</strong></p>
+        </div>
+        <div class="col-md-4">
+            <a class="btn btn-default home-btn" href="#" role="button">Profile</a>
+            <a class="btn btn-default home-btn" href="#" role="button">Friends</a>
+            <a class="btn btn-default home-btn" href="#" role="button">Messages</a>
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="row home-profile img-rounded">
+                <div class="col-md-6">
+                    <img class='img-face' src="https://deaenij3kiw8r.cloudfront.net/system/users/avatars/141380/original/production-b3612f96cc66fee631be82853dd2c316-man_bartlett_bw.jpg?1369799811" alt="user_pic">
+                </div>
+                <div class="col-md-6">
+                    <p class="home-profile-special">{{profile.UserId}}</p>
+                    <p>I'm <span class="home-profile-special">{{profile.Age}}</span></p>
+                    <p>I'm living in <span class="home-profile-special">{{profile.Zipcode}} </span></p>
+                    <p>Contact me with</p>
+                    <p><span class="home-profile-special">{{profile.Email}}</span></p>
+                    <p>I began to use it in <span class="home-profile-special">{{profile.Starttime}}</span></p>
+                </div>
+            </div>
+            <div class="row home-friendlist img-rounded">
+                <p class="home-h2">My Friends</p>
+                <li ng-repeat='friend in friends' class='list-group-item'>
+                    <!--friend.img-->
+                    <strong>{{friend.username}}</strong>
+                </li>
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="row home-posts img-rounded">
+                <p class="home-h2">What's happening now</p>
+                <input ng-model='postBody' class='form-control' />
+                <button ng-click='addPost()' class='btn btn-default'>Post</button>
+                <ul class='list-group'>
+                    <li ng-repeat='post in posts' class='list-group-item'>
+                        <strong>{{post.username}}</strong>
+                        <span>{{post.body}}</span>
+                        <!--<postDirective></postDirective>-->
+                        <!--                        <span>{{post.video}}</span>-->
+                        <iframe id="post-video" width="90%" height="auto" ng-src="{{trustSrc(post.video)}}" ng-hide="post.video ==''" frameborder="0" allowfullscreen></iframe>
+<!--                        <span>{{post.img}}</span>-->
+                        <img id="post-img" src="{{post.img}}" ng-hide="post.img == ''" style="width:90%; height:auto;">
+                        <div class="row">
+                            <div class="col-md-3" style="height:50px">
+                                <img class='img-face-small' src="https://deaenij3kiw8r.cloudfront.net/system/users/avatars/141380/original/production-b3612f96cc66fee631be82853dd2c316-man_bartlett_bw.jpg?1369799811">
+                            </div>
+                            <div class="col-md-9" style="height:50px; vertical-align:middle;">
+                                <div class="input-group">
+                                    <input ng-model='vm.commentBody' class='form-control' />
+                                    <span class="input-group-btn">
+                                        <!--addComment(post.user, post.postId)-->
+                                        <button ng-click='addComment()' class="btn btn-default">Yes</button>
+                                    </span>
+                                </div>
+                                <!-- /input-group -->
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <ul class='list-group'>
+                                <li ng-repeat='comment in comments' class='list-group-item'>
+                                    <strong>{{username}}@{{post.username}}</strong>
+                                    <span>{{comment.body}}</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="col-md-4">
+            <div class="row home-peopleMayKnow img-rounded">
+                <p class="home-h2">You may know them...</p>
+                <li ng-repeat='person in peopleMayKnow' class='list-group-item'>
+                    <!--friend.img-->
+                    <strong>{{person.username}}</strong>
+                </li>
+            </div>
+            <div class="row">
+                <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</div>
